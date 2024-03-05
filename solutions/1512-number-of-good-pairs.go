@@ -15,6 +15,20 @@ func numIdenticalPairs(nums []int) int {
 	return pairCount
 }
 
+// second solution better perfomarce
+
+func numIdenticalPairs2(A []int) int {
+	ans := 0
+	cnt := make(map[int]int)
+
+	for _, x := range A {
+		ans += cnt[x]
+		cnt[x]++
+	}
+
+	return ans
+}
+
 /*
 Given an array of integers nums, return the number of good pairs.
 
