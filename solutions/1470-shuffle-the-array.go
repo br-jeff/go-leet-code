@@ -3,7 +3,7 @@ package solutions
 func shuffle(nums []int, n int) []int {
 	var returnedArr = make([]int, 0, (n*2)+1)
 	for i := 0; i < n; i++ {
-		append(returnedArr, nums[i], nums[i+n])
+		returnedArr := append(returnedArr, nums[i], nums[i+n])
 
 		returnedArr[len(returnedArr)] = nums[n]
 	}
